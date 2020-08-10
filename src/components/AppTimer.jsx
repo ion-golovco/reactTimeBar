@@ -87,7 +87,7 @@ function formatDuration(date, n) {
   let s = ["second", "minute", "hour", "day", "year"];
   for (i = acc.length; i > -1; i -= 1) {
     if (acc[i] > 0) {
-      if (acc[i] == 1) {
+      if (acc[i] === 1) {
         curr = s[i];
       }
       if (acc[i] > 1) {
@@ -97,7 +97,7 @@ function formatDuration(date, n) {
     }
   }
   for (i = 0; i < res.length; i += 1) {
-    let curr1 = i == res.length - 2 ? " and " : ", ";
+    let curr1 = i === res.length - 2 ? " and " : ", ";
     res1.push(res[i] + curr1);
   }
   res1 = res1.join("");
